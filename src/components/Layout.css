@@ -1,0 +1,15 @@
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: calc(var(--sidebar-width) + 20px);
+    padding: 0 20px;
+}
+
+.page-content {
+    width: 100%;
+}
