@@ -3,22 +3,22 @@
   /* SAP Red */
   --primary-hover: #c4191d;
   --secondary: #4a4a4a;
-  --bg-color: #ffffff;
-  --surface-color: rgba(255, 255, 255, 0.8);
+  --bg-color: #f0f2f5;
+  --surface-color: rgba(255, 255, 255, 0.95);
   --text-primary: #121212;
   --text-secondary: #5f5f5f;
-  --border-color: rgba(227, 30, 36, 0.15);
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-blur: 16px;
-  --shadow-sm: 0 4px 12px rgba(227, 30, 36, 0.08);
-  --shadow-md: 0 12px 40px rgba(227, 30, 36, 0.15);
+  --border-color: rgba(227, 30, 36, 0.25);
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-blur: 24px;
+  --shadow-sm: 0 4px 12px rgba(227, 30, 36, 0.08), 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 12px 32px rgba(227, 30, 36, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
   --sidebar-width: 280px;
   --header-height: 70px;
-  --radius-lg: 12px;
-  --radius-md: 8px;
-  --radius-sm: 4px;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
 
-  /* Status Colors (Red variant for error, green for success) */
+  /* Status Colors */
   --success: #28a745;
   --warning: #ffc107;
   --error: #e31e24;
@@ -29,15 +29,14 @@
   --primary: #ff4d4d;
   --primary-hover: #ff3333;
   --secondary: #b3b3b3;
-  --bg-color: #1a0505;
-  /* Deep red-black */
-  --surface-color: rgba(45, 10, 10, 0.8);
+  --bg-color: #0d0101;
+  --surface-color: rgba(45, 10, 10, 0.95);
   --text-primary: #ffffff;
   --text-secondary: #e0e0e0;
-  --border-color: rgba(255, 255, 255, 0.1);
-  --glass-bg: rgba(30, 5, 5, 0.7);
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.6);
+  --border-color: rgba(255, 255, 255, 0.25);
+  --glass-bg: rgba(20, 5, 5, 0.85);
+  --shadow-sm: 0 8px 16px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --shadow-md: 0 16px 48px rgba(0, 0, 0, 0.8), 0 0 10px rgba(227, 30, 36, 0.2);
 }
 
 @font-face {
