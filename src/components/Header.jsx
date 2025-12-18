@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Search, Bell, Moon, Sun, Trash2 } from 'lucide-react';
 import { useAppContext } from '../context/AppContext';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -7,6 +7,23 @@ import './Header.css';
 const Header = ({ title }) => {
     const { theme, toggleTheme, searchQuery, setSearchQuery, notifications, clearNotifications } = useAppContext();
     const [showNotifs, setShowNotifs] = useState(false);
+    const notifRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (notifRef.current && !notifRef.current.contains(event.target)) {
+                setShowNotifs(false);
+            }
+        };
+
+        if (showNotifs) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [showNotifs]);
 
     return (
         <header className="header glass-card">
@@ -30,7 +47,7 @@ const Header = ({ title }) => {
                         {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
                     </button>
 
-                    <div className="notification-wrapper">
+                    <div className="notification-wrapper" ref={notifRef}>
                         <button
                             className={`action-btn ${notifications.length > 0 ? 'notification' : ''}`}
                             onClick={() => setShowNotifs(!showNotifs)}
